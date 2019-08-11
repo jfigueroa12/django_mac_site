@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  python_app:
+    build: .
+    working_dir: /django_mac_site/$PROJECTNAME/
+    command: command: gunicorn -b 0.0.0.0:5000 $PROJECTNAME.wsgi
+    volumes:
+      - .:/django_mac_site
+    env_file:
+      - .env
+
+  proxy:
+    
