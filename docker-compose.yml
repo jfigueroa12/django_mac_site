@@ -4,11 +4,18 @@ services:
   python_app:
     build: .
     working_dir: /django_mac_site/$PROJECTNAME/
-    command: command: gunicorn -b 0.0.0.0:5000 $PROJECTNAME.wsgi
+    command: gunicorn -b 0.0.0.0:5000 $PROJECTNAME.wsgi
     volumes:
       - .:/django_mac_site
     env_file:
       - .env
 
   proxy:
-    
+    build: ./nginx
+    ports:
+      - "5000:80"
+
+  db:
+    build: ./postgres
+    #volumes:
+    #  - ./postgres/postgres_data:/var/lib/postgresql/data/
