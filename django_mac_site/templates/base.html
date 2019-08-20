@@ -9,8 +9,8 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
-  <!-- {% load static %}
-  <link rel="stylesheet" type="text/css" href="{% static 'myblog/myblogcss.css' %}"> -->
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/mac.css' %}">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -19,26 +19,17 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">Apple Wiki</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <img src="https://django-jon-project-static.s3.amazonaws.com/images/logo1_200x200.png"
+     alt="Not Found" style="width:60px;height:60px;">
+  <!-- <a class="navbar-brand" href="#">Apple Wiki</a> -->
+  </nav>
 
 
 
 {% block content %}
+
+  <input type="text" class="form-control" placeholder="Enter WSID or serial #">
 
 {% endblock content %}
 
