@@ -1,0 +1,36 @@
+<!-- results.html -->
+
+{% extends 'get_info.html' %}
+
+
+{% block content %}
+
+  {{ serial }}
+  {{ results }}
+
+  <table class="table table-light table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="colgroup" colspan="2">{{ results.name|upper }}</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for key, value in results.items %}
+      <tr>
+      <td>{{ key|upper }}</td>
+      <td>{{ value|upper }}</td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+
+
+
+
+
+
+
+  </table>
+
+{% endblock content %}

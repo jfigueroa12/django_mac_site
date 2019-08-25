@@ -1,0 +1,32 @@
+<!-- get_info.html -->
+
+{% extends 'base.html' %}
+
+{% block center_box %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-5">
+
+
+{% block content %}
+
+    <form action="" method="POST">
+      <div class="input-group">
+          {% csrf_token %}
+          {{ form }}
+      <!--    <input type="text" class="form-control" placeholder="Enter WSID or serial #">  -->
+        <div class="input-group-append">
+          <button type="submit" class="btn btn-info">
+          <span class="fa fa-search"></span>
+          </button>
+        </div>
+      </div>
+    </form>
+
+{% endblock content %}
+
+</div>
+</div>
+</div>
+
+{% endblock center_box %}

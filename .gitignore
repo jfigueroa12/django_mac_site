@@ -1,3 +1,4 @@
 .DS_Store
 .env
 postgres_data
+jss_api_call.py
