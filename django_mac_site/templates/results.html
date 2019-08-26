@@ -8,7 +8,9 @@
   {{ serial }}
   {{ results }}
 
-  <table class="table table-light table-striped table-bordered">
+
+
+  <table class="table table-sm table-light table-bordered table-hover">
     <thead class="thead-dark">
       <tr>
         <th scope="colgroup" colspan="2">{{ results.name|upper }}</th>
@@ -18,19 +20,16 @@
     <tbody>
       {% for key, value in results.items %}
       <tr>
-      <td>{{ key|upper }}</td>
+      <th>{{ key|upper }}</th>
       <td>{{ value|upper }}</td>
       </tr>
       {% endfor %}
 
     </tbody>
 
-
-
-
-
-
-
   </table>
+
+
+
 
 {% endblock content %}

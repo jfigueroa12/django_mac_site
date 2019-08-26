@@ -2,11 +2,14 @@
 
 {% extends 'base.html' %}
 
-{% block center_box %}
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-sm-5">
 
+{% block center_box %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-6">
 
 {% block content %}
 
@@ -24,6 +27,8 @@
     </form>
 
 {% endblock content %}
+
+  <div class="col-sm-3"></div>
 
 </div>
 </div>
