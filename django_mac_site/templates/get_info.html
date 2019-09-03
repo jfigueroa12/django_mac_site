@@ -11,20 +11,23 @@
 
     <div class="col-sm-6">
 
-{% block content %}
 
+{% block content %}
+    <div id="search-wrapper" class="container-fluid">
+    <h1>Computer Search</h1>
     <form action="" method="POST">
       <div class="input-group">
           {% csrf_token %}
           {{ form }}
       <!--    <input type="text" class="form-control" placeholder="Enter WSID or serial #">  -->
         <div class="input-group-append">
-          <button type="submit" class="btn btn-info">
+          <button id="search-button" type="submit" class="btn">
           <span class="fa fa-search"></span>
           </button>
         </div>
       </div>
     </form>
+    </div>
 
 {% endblock content %}
 

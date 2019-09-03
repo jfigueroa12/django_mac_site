@@ -1,7 +1,48 @@
 body
 {
   padding: 25px;
-  background-color: #8FBC8F;
+  background: #FFFFFF;
+}
+
+h1
+{
+  text-align: center;
+  color: #0074D9;
+}
+
+#search-field
+{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 2px solid #0074D9;
+  box-shadow: none;
+  text-transform: uppercase;
+}
+
+#search-field::placeholder
+{
+  text-transform: none;
+}
+
+#search-button
+{
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #0074D9;
+  color: #FFFFFF;
+}
+
+
+.searchTerm
+{
+/*  border-radius: 1rem;
+  border: 2px solid #0074D9; */
+}
+
+#search-wrapper
+{
+  position: relative;
+  top: 150px;
 }
 
 input {
@@ -11,7 +52,6 @@ input {
 .input-group
 {
   position: relative;
-  top: 150px;
 }
 
 td, th
