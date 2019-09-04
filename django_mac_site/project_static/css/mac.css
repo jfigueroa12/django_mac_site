@@ -54,28 +54,32 @@ input {
   position: relative;
 }
 
-table
+.result-table
 {
   border: 2px solid #AAAAAA;
+  border-collapse: collapse;
+  margin: 15px 0;
+  font-size: 0.9em;
 }
 
-thead
+.result-table thead tr th
 {
-  border-style: hidden;
+  background-color: #009879;
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: bold;
 }
 
-td
+.result-table td
 {
   text-align: center;
-  border-style: hidden;
+  padding: 12px 15px;
+  /* border-style: hidden; */
 }
 
-th
+.result-table tbody tr
 {
-  color: #0074D9;
-  background-color: #FFFFFF;
-  text-align: center;
-  border-style: hidden;
+  border-bottom: 1px solid #DDDDDD;
 }
 
 @media only screen and (max-width: 600px) {

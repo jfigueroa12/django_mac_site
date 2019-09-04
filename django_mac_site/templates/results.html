@@ -9,7 +9,7 @@
   {{ results }}
                   -->
 
-  <table class="table table-sm">
+  <table class="table table-sm result-table">
     <thead>
       <tr>
         <th scope="colgroup" colspan="2">{{ results.name|upper }}</th>
@@ -19,7 +19,7 @@
     <tbody>
       {% for key, value in results.items %}
       <tr>
-      <th>{{ key|upper }}</th>
+      <td>{{ key|upper }}</td>
       <td>{{ value|upper }}</td>
       </tr>
       {% endfor %}
