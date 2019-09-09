@@ -7,14 +7,14 @@ body
 h1
 {
   text-align: center;
-  color: #0074D9;
+  color: #009879;
 }
 
 #search-field
 {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  border: 2px solid #0074D9;
+  border: 2px solid #009879;
   box-shadow: none;
   text-transform: uppercase;
 }
@@ -28,10 +28,9 @@ h1
 {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  background-color: #0074D9;
+  background-color: #009879;
   color: #FFFFFF;
 }
-
 
 .searchTerm
 {
