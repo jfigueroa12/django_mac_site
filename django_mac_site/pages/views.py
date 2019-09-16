@@ -2,8 +2,9 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from .forms import InfoForm
 from .jss_api_call import query_api
-from .jss_api_call import format_results
+from .jss_api_call import convert_units
 from .jss_api_call import truncate
+from .jss_api_call import format_results
 # Create your views here.
 
 class GetInfoView(TemplateView):
@@ -20,12 +21,13 @@ def get_info(request):
         if form.is_valid():
             serial = form.cleaned_data['serial']
             results = query_api(serial)
-            
+
             if 'Not Found' in results:
                 return render(request, 'results.html', { 'serial': serial, 'results': results })
             else:
-                format_results(results)
-                return render(request, 'results.html', { 'serial': serial, 'results': results })
+                convert_units(results)
+                final_results = format_results(results)
+                return render(request, 'results.html', { 'serial': serial, 'results': final_results })
 
     else:
         form = InfoForm()
