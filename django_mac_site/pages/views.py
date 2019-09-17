@@ -20,13 +20,13 @@ def get_info(request):
 
         if form.is_valid():
             serial = form.cleaned_data['serial']
-            results = query_api(serial)
+            (results, storage_results) = query_api(serial)
 
             if 'Not Found' in results:
                 return render(request, 'results.html', { 'serial': serial, 'results': results })
             else:
-                convert_units(results)
-                final_results = format_results(results)
+                convert_units(results, storage_results)
+                final_results = format_results(results, storage_results)
                 return render(request, 'results.html', { 'serial': serial, 'results': final_results })
 
     else:
