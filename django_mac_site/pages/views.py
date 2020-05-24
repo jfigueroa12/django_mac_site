@@ -5,12 +5,13 @@ from .jss_api_call import query_api
 from .jss_api_call import convert_units
 from .jss_api_call import truncate
 from .jss_api_call import format_results
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 class GetInfoView(TemplateView):
     template_name = 'get_info.html'
 
-
+@csrf_exempt
 def get_info(request):
     serial = ''
     results = {}

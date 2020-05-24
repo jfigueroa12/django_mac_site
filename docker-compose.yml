@@ -12,6 +12,8 @@ services:
       - .env
     ports:
       - "5090:5090"
+    depends_on:
+      - db
 
   #proxy:
     #build: ./nginx
