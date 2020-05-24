@@ -33,3 +33,7 @@ def get_info(request):
     else:
         form = InfoForm()
         return render(request, 'get_info.html', { 'form': form })
+
+
+@csrf_exempt
+def get_info(request):
