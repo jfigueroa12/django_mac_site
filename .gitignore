@@ -3,3 +3,4 @@
 postgres_data
 jss_api_call.py
 .pyc
+_pycache_
