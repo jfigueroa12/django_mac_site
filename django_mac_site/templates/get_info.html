@@ -14,7 +14,11 @@
 
 {% block content %}
     <div id="search-wrapper" class="container-fluid">
+
+    {% block title %}
     <h1>Computer Search</h1>
+    {% endblock title %}
+    
     <form action="" method="POST">
       <div class="input-group">
           {% csrf_token %}

@@ -12,7 +12,9 @@
   <table class="table table-sm result-table">
     <thead>
       <tr>
+        {% block table_title %}
         <th scope="colgroup" colspan="2">{{ results.name|upper }}</th>
+        {% endblock table_title %}
       </tr>
     </thead>
 
