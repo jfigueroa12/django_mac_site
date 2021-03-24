@@ -3,11 +3,16 @@
 {% extends 'base.html' %}
 
 
+<button type="button" class="btn btn-primary">Primary</button>
+
 {% block center_box %}
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-3"></div>
+    <div class="col-sm-3">
+
+
+    </div>
 
     <div class="col-sm-6">
 
@@ -18,7 +23,7 @@
     {% block title %}
     <h1>Computer Search</h1>
     {% endblock title %}
-    
+
     <form action="" method="POST">
       <div class="input-group">
           {% csrf_token %}

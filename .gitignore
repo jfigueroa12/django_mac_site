@@ -2,5 +2,6 @@
 .env
 postgres_data
 jss_api_call.py
+dep_req.py
 .pyc
 __pycache__
