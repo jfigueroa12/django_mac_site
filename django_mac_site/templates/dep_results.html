@@ -1,0 +1,36 @@
+<!-- dep_results.html -->
+
+{% extends 'results.html' %}
+
+
+{% block backbutton %}
+  <a class="btn buttonbackto" href="http://mmis0098:5090/dep_check" role="button">Back to Search</a>
+
+{% endblock backbutton %}
+
+{% block table_title %}
+<th scope="colgroup" colspan="2">DEP Enrollment Check</th>
+{% endblock table_title %}
+
+
+{% block message %}
+
+{% if results.enrolled %}
+<div class="card">
+  <div class="card-body">
+    This serial is enrolled in DEP database.
+  </div>
+</div>
+
+{% else %}
+
+<div class="card">
+  <div class="card-body">
+    This serial is not enrolled in DEP database.
+  </div>
+</div>
+
+{% endif %}
+
+
+{% endblock message %}
