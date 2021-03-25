@@ -109,12 +109,12 @@ def get_Nested_Items(data, search, root):
 def request_data(serial):
     if len(serial) < 10:
         request = requests.get(
-        url + '/computers/name/' + serial,
+        url + 'JSSResource/computers/name/' + serial,
         auth=(base64.b64decode(username.encode('ascii')).decode('ascii'),
         base64.b64decode(password.encode('ascii')).decode('ascii')))
     else:
         request = requests.get(
-        url + '/computers/serialnumber/' + serial,
+        url + 'JSSResource/computers/serialnumber/' + serial,
         auth=(base64.b64decode(username.encode('ascii')).decode('ascii'),
         base64.b64decode(password.encode('ascii')).decode('ascii')))
 
