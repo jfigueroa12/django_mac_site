@@ -8,7 +8,7 @@ import requests
 
  jss_key = os.getenv('JSS_KEY_V2')
 
- #serial = "C02Z1373LVDL"
+ #serial = ""
 
  def dep_request(serial):
 
