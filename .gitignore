@@ -1,5 +1,5 @@
 .DS_Store
 .env
-postgres_data
 .pyc
 __pycache__
+postgres_data
